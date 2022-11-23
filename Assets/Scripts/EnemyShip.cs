@@ -48,7 +48,7 @@ public class EnemyShip : MonoBehaviour
         }
         else if (collision.CompareTag("box") == true)
         {
-           
+            
         }
     }
 }

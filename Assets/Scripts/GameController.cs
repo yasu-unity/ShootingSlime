@@ -31,7 +31,8 @@ public class GameController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                SceneManager.LoadScene("Stage1");
+                //SceneManager.LoadScene("Stage1");
+                RestartThisScene();
             }
         }
        
@@ -45,5 +46,10 @@ public class GameController : MonoBehaviour
     {
         gameOverText.SetActive(true);
 
+    }
+    void RestartThisScene()
+    {
+        Scene ThisScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(ThisScene.name);
     }
 }
